@@ -75,3 +75,7 @@ gameList.insert(0, 'Colony Servival')
 print('リストのindex0に要素を挿入:', gameList)
 
 
+"""リストの中身の合計(全てが数値のとき)"""
+numList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+sumNumList = sum(numList)
+print('リストの合計値:', sumNumList)
