@@ -79,3 +79,24 @@ print('リストのindex0に要素を挿入:', gameList)
 numList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 sumNumList = sum(numList)
 print('リストの合計値:', sumNumList)
+
+
+"""タプルからリストを作る"""
+myTuple = 10, 20, 30, 40
+tupleList = list(myTuple)
+print('タプルから作られたリスト:', tupleList)
+
+
+"""setからリストを作る"""
+mySet = {1, 2, 3, 4}
+setList = list(mySet)
+print('setから作られたリスト:', setList)
+
+
+"""文字列からリストを作る"""
+str1 = "abcdefg"
+str2 = 'これは、文字列、を、リスト、に、するため、の、文字列、です'
+strList1 = list(str1)
+strList2 = str2.split('、')
+print('str1から文字列を作成:', strList1)
+print('str2から文字列を作成:', strList2)
