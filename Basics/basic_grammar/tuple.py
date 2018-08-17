@@ -1,9 +1,12 @@
 """タプルで遊ぶ"""
-#タプルの宣言
+
+
+"""タプルの宣言"""
 tuple1 = 10, 20, 30
 print('tuple1:',tuple1)
 
-#タプルのアンパック
+
+"""タプルのアンパック"""
 tuple2 = (1, 2, 3, 4)
 print('tuple2:', tuple2)
 num1, num2, num3, num4 = tuple2
