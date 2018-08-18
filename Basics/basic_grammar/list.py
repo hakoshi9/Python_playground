@@ -56,6 +56,8 @@ print('スライスによる書きかえ:', fruitList)
 
 
 """要素の削除"""
+nameList = ['Joshua', 'Ted', 'Shino', 'Kubo', 'Suganen', 'Mattsun']
+print('nameList:', nameList)
 #[最後の要素を取り出して削除(取り出した値を受け取れる)]
 fruitList.pop()
 print('リストの最後の要素を取り出して削除:', fruitList)
@@ -66,8 +68,8 @@ print('指定した箇所の要素を取り出して削除:', fruitList)
 del fruitList[-1]
 print('一番最後の要素をdelを使って削除(list[index]で要素を指定)', fruitList)
 #[通常の削除 remove(要素)]
-fruitList.remove(2)
-print('特定の要素を指定して削除:',fruitList)
+nameList.remove('Joshua')
+print('特定の要素を指定して削除:', nameList)
 
 
 """要素の挿入"""
@@ -100,3 +102,17 @@ strList1 = list(str1)
 strList2 = str2.split('、')
 print('str1から文字列を作成:', strList1)
 print('str2から文字列を作成:', strList2)
+
+
+"""リストをソートする"""
+numList = [5, 3, 1, 9, 6, 7, 4, 8, 2]
+numList.sort()
+print('numListをソート', numList)
+
+
+"""リストのアンパック"""
+listVar1, listVar2, listVar3, listVar4 = tupleList
+print('listVar1', listVar1)
+print('listVar2', listVar2)
+print('listVar3', listVar3)
+print('listVar4', listVar4)
