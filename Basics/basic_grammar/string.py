@@ -15,3 +15,13 @@ print('list1を空白を使って連結:', str4)
 print('tuple1を,を使って連結:', str5)
 
 
+'''文字列を条件でリストに'''
+list2 = str4.split(' ')
+print('str4を空白でsplitして作ったlist2:', list2)
+
+
+'''文字列の一定のものをある条件に置き換える'''
+str6 = 'Hello,My,Name,Is,Joshua.'
+print(',を空白に置換:', str6.replace(',', ' '))
+
+
