@@ -66,7 +66,7 @@ fruitList.pop(4)
 print('指定した箇所の要素を取り出して削除:', fruitList)
 #[通常の削除 del]
 del fruitList[-1]
-print('一番最後の要素をdelを使って削除(list[index]で要素を指定)', fruitList)
+print('一番最後の要素をdelを使って削除(list[index]で要素を指定):', fruitList)
 #[通常の削除 remove(要素)]
 nameList.remove('Joshua')
 print('特定の要素を指定して削除:', nameList)
@@ -100,14 +100,16 @@ str1 = "abcdefg"
 str2 = 'これは、文字列、を、リスト、に、するため、の、文字列、です'
 strList1 = list(str1)
 strList2 = str2.split('、')
-print('str1から文字列を作成:', strList1)
-print('str2から文字列を作成:', strList2)
+print('str1からリストを作成:', strList1)
+print('str2からリストを作成:', strList2)
 
 
 """リストをソートする"""
 numList = [5, 3, 1, 9, 6, 7, 4, 8, 2]
 numList.sort()
 print('numListをソート', numList)
+numList.reverse()
+print('それを逆にソート:', numList)
 
 
 """リストのアンパック"""
@@ -116,3 +118,33 @@ print('listVar1', listVar1)
 print('listVar2', listVar2)
 print('listVar3', listVar3)
 print('listVar4', listVar4)
+
+
+"""インデックスの検索"""
+index_search = [1, 2, 3, 4, 5, 6, 5, 4, 3 ,2 ,1]
+print('指定した要素がリストのどのインデックスかを返す:', index_search.index(3)) #ただし、最初に引っかかるものを返す
+print('指定した値から先の指定した要素のインデックスを返す:', index_search.index(3, 4)) #第一引数->開始, 第二引数->検索要素
+
+
+"""要素の検索"""
+#[if構文を使う]
+if 8 in index_search:
+    print('exist')
+else:
+    print('does not exist')
+
+
+"""リストのコピー"""
+#[リストは参照型のためコピーをしないといけない]
+firstList = [1, 2, 3, 4, 5]
+secondList = firstList
+secondList[1] = 100
+print('secondList[1]に100を代入すると参照しているfirstListの[1]も変わってしまう')
+print('firstList:', firstList)
+print('secondList:', secondList)
+thirdList = firstList.copy()
+thirdList[3] = 200
+print('firstListをthirdListにコピーしたのちthirdList[3]を200に変更')
+print('firstList:', firstList)
+print('secondList:', secondList)
+print('thirdList:', thirdList)
