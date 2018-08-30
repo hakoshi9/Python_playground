@@ -51,3 +51,8 @@ for i in my_dict:
 #[keyもvalueも取り出す場合]
 for key, value in my_dict.items():
     print('{key}: {value}'.format(key=key, value=value))
+
+
+"""range関数を使ったループ回数の指定"""
+for i in range(0, 10):
+    print('range:', i)
