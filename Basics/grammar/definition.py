@@ -60,3 +60,16 @@ def dict_arg(**my_data):
     print('dict_arg()の実行:', my_data)
 #変数がキーに、値がバリューになる
 dict_arg(name='Joshua', age=22, job='Programmer', lover=False)
+
+
+"""関数内関数"""
+def outer(a, b):
+    def plus(c, d):
+        return c + d
+    #関数内で関数内関数を宣言する
+    r = plus(a, b)
+    print('outer()の実行。中のplus()が動いている:', r)
+outer(2, 5)
+
+
+"""クロージャー"""
