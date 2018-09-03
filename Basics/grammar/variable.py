@@ -19,6 +19,7 @@ print('num3:', num3)
 num4 = num5 = num6 = 100
 print('num4:', num4)
 print('num5:', num5)
+num6 = 200
 print('num6:', num6)
 
 
