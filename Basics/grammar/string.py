@@ -7,8 +7,10 @@ print('str1とstr2を連結させたstr3:', str3)
 print('+演算子がなくても連結させることができる:', 'Py''thon')
 
 
+
 """文字列のインデックス"""
 print('str1のインデックス0を出力:', str1[0])
+
 
 
 """リスト/タプルを文字列へ連結"""
@@ -20,9 +22,11 @@ print('list1を空白を使って連結:', str4)
 print('tuple1を,を使って連結:', str5)
 
 
+
 """文字列を条件でリストへ"""
 list2 = str4.split(' ')
 print('str4を空白でsplitして作ったlist2:', list2)
+
 
 
 """文字列の一部を置換"""
@@ -30,10 +34,12 @@ str6 = 'Hello,My,Name,Is,Joshua.'
 print(',を空白に置換:', str6.replace(',', ' '))
 
 
+
 """文字列のスライス"""
 str7 = "スライス用文字列str7"
 print('str7を2~4でスライス:', str7[2:5])
 #スライスのルールはリストと一緒
+
 
 
 """文字列の検索"""
@@ -48,6 +54,7 @@ print(searchString.find('Joshua')) #ただし、最初にその文字列に当�
 print(searchString.rfind('Joshua')) #後ろの奴を探す
 #[特定の文字列がいくつ入っているかを検索する]
 print(searchString.count('Joshua')) #リストにもある
+
 
 
 """文字列の変更"""
