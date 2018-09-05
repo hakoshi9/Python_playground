@@ -7,6 +7,7 @@ def say_something():
 say_something()
 
 
+
 """戻り値"""
 def return_something():
     s = 'This text has been returned'
