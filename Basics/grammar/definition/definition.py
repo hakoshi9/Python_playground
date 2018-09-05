@@ -15,6 +15,7 @@ returned = return_something()
 print('return_something()の実行:', returned)
 
 
+
 """引数"""
 #[通常]
 def what_is_this(color):
@@ -62,6 +63,7 @@ def dict_arg(**my_data):
 dict_arg(name='Joshua', age=22, job='Programmer', lover=False)
 
 
+
 """関数内関数"""
 def innerDefinition(a, b):
     def plus(c, d):
@@ -70,6 +72,7 @@ def innerDefinition(a, b):
     r = plus(a, b)
     print('innerDefinition()の実行。中のplus()が動いている:', r)
 innerDefinition(2, 5)
+
 
 
 """クロージャー"""
@@ -97,10 +100,85 @@ print('cal1:', cal1(17))
 print('cal2:', cal2(17))
 
 
+
 """デコレーター"""
+def print_info(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return print('デコレーター:', result)
+    return wrapper
+
+def print_more(func):
+    def wrapper(*args, **kwargs):
+        print('func:', func.__name__)
+        print('args:', args)
+        print('kwargs:', kwargs)
+        result = func(*args, **kwargs)
+        return print('result:', result)
+    return wrapper
+
+@print_more
+@print_info
+def add_num(a, b):
+    return a + b
+add_num(10, 20)
+
+def my_deco(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        print('my_deco:', result)
+        return result
+    return wrapper
+
+@my_deco
+def sub_num(a, b):
+    return a - b
+sub_num(10, 20)
+
 
 
 """ラムダ"""
+daylist = ['Mon', 'tue', 'Wed', 'Thu', 'fri', 'sat', 'Sun']
+def change_words(words, func):
+    for word in words:
+        print('ラムダの実行:', func(word))
+sample_func = lambda word: word.capitalize()
+change_words(daylist, sample_func)
+
 
 
 """ジェネレータ"""
+aisatsu = ['Good morning', 'Good afternoon', 'Good night']
+def greeting():
+    #要素を一個一個生成するのがジェネレーター
+    yield 'Good morning'
+    yield 'Good afternoon'
+    yield 'Good night'
+
+for i in greeting():
+    print('ジェネレーターの実行:', i)
+g = greeting()
+print('１つずつ表示される:', next(g))
+print('@@@@@@@@@@@')
+print('１つずつ表示される:', next(g))
+print('@@@@@@@@@@@')
+print('１つずつ表示される:', next(g))
+
+def counter(num=10):
+    for _ in range(num):
+        #yieldがあるとpythonはジェネレーターとして扱う
+        yield 'run'
+
+c = counter()
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+#一気に処理をするのではなく、yieldで一回一回処理を呼び出す。
+#一気に処理をせずに一回一回処理を施したい時に使う

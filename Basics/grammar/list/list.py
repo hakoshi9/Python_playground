@@ -8,9 +8,11 @@ gameList.append('Borderlands2')
 print(gameList)
 
 
+
 """+=で複数の値を一度に追加"""
 gameList += 'Fallout4', 'Biohazard7'
 print(gameList)
+
 
 
 """extend()で複数の値を一度に追加。これの場合は複数の値をリストにする必要がある"""
@@ -19,9 +21,11 @@ gameList.extend(["Assassin's Creed4: Black flag", 'Titan Fall2'])
 print(gameList)
 
 
+
 """リストの要素数を調べる"""
 listCount = len(gameList)
 print(listCount)
+
 
 
 """リストの中にある特定の要素が何個存在するかを数える"""
@@ -36,6 +40,7 @@ print('Mango:', mangoCount)
 print('Orange:', orangeCount)
 
 
+
 """どこから要素を持ってくるかを選べる"""
 print('全て:', gameList[:])
 print('index1からindex3の手前まで:', gameList[1:3])
@@ -43,9 +48,11 @@ print('最初からindex4手前まで:', gameList[:4])
 print('index2から最後まで:', gameList[2:])
 
 
+
 """飛ばしてリストを取ってくる"""
 jumpTwo = fruitList[::2]
 print('偶数を飛ばす:',jumpTwo)
+
 
 
 """要素の書きかえ"""
@@ -53,6 +60,7 @@ fruitList[4] = 'Melon'
 print('index4を書きかえ:', fruitList)
 fruitList[1:4] = [1, 2, 3]
 print('スライスによる書きかえ:', fruitList)
+
 
 
 """要素の削除"""
@@ -72,9 +80,11 @@ nameList.remove('Joshua')
 print('特定の要素を指定して削除:', nameList)
 
 
+
 """要素の挿入"""
 gameList.insert(0, 'Colony Servival')
 print('リストのindex0に要素を挿入:', gameList)
+
 
 
 """リストの中身の合計(全てが数値のとき)"""
@@ -83,16 +93,19 @@ sumNumList = sum(numList)
 print('リストの合計値:', sumNumList)
 
 
+
 """タプルからリストを作る"""
 myTuple = 10, 20, 30, 40
 tupleList = list(myTuple)
 print('タプルから作られたリスト:', tupleList)
 
 
+
 """setからリストを作る"""
 mySet = {1, 2, 3, 4}
 setList = list(mySet)
 print('setから作られたリスト:', setList)
+
 
 
 """文字列からリストを作る"""
@@ -104,12 +117,14 @@ print('str1からリストを作成:', strList1)
 print('str2からリストを作成:', strList2)
 
 
+
 """リストをソートする"""
 numList = [5, 3, 1, 9, 6, 7, 4, 8, 2]
 numList.sort()
 print('numListをソート', numList)
 numList.reverse()
 print('それを逆にソート:', numList)
+
 
 
 """リストのアンパック"""
@@ -120,10 +135,12 @@ print('listVar3', listVar3)
 print('listVar4', listVar4)
 
 
+
 """インデックスの検索"""
 index_search = [1, 2, 3, 4, 5, 6, 5, 4, 3 ,2 ,1]
 print('指定した要素がリストのどのインデックスかを返す:', index_search.index(3)) #ただし、最初に引っかかるものを返す
 print('指定した値から先の指定した要素のインデックスを返す:', index_search.index(3, 4)) #第一引数->開始, 第二引数->検索要素
+
 
 
 """要素の検索"""
@@ -132,6 +149,7 @@ if 8 in index_search:
     print('exist')
 else:
     print('does not exist')
+
 
 
 """リストのコピー"""

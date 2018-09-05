@@ -9,10 +9,12 @@ print('set1:', set1)
 print('set1の合計値:', sumSet)
 
 
+
 """setに値を追加"""
 add_set = {1, 2, 3, 4, 5}
 add_set.add(6)
 print('add_setに6を追加:', add_set)
+
 
 
 """setの値を削除"""

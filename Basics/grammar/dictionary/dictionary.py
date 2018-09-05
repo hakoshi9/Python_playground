@@ -6,9 +6,11 @@ dict_key = {'name': 'Joshua', 'age': 22, 'job': 'programmer'}
 print('Keyのみを取得:', dict_key.keys())
 
 
+
 """辞書の値のみを取得する"""
 dict_value = {'name': 'Joshua', 'age': 22, 'job': 'programmer'}
 print('Valueのみを取得:', dict_value.values())
+
 
 
 """辞書のアップデート"""
@@ -21,6 +23,7 @@ update_dict.update({'name': 'Joshua Hashimoto', 'sex': 'Male'})
 print('update_dictのアップデート:', update_dict)
 
 
+
 """辞書の中身の取得"""
 get_dict = {'name': 'Joshua', 'age': 22, 'job': 'programmer'}
 #[通常]
@@ -28,6 +31,7 @@ print('get_dict["name"]:', get_dict["name"]) #ただし、これは存在しな�
 #[指定したキーが存在しない時にエラーにならない]
 print('get_dict.get("name"):', get_dict.get("name"))
 print('get_dict.get("hobby"):', get_dict.get("hobby"))
+
 
 
 """辞書の要素を削除"""
@@ -39,9 +43,11 @@ print('要素がpopされた後の辞書を確認:', delete_dict)
 print('clear():', delete_dict.clear())
 
 
+
 """要素の検索"""
 search_dict = {'name': 'Joshua Hashimoto', 'age': 23, 'job': 'programmer', 'sex': 'Male'}
 print("'sex'キーがあるかを確認:", 'sex' in search_dict)
+
 
 
 """辞書のコピー"""
