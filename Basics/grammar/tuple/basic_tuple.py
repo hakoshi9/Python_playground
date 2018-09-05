@@ -14,3 +14,10 @@ print('unpacked1:', unpacked1)
 print('unpacked2:', unpacked2)
 print('unpacked3:', unpacked3)
 print('unpacked4:', unpacked4)
+
+
+
+# タプルをスライス
+numTuple = 5, 3, 1, 9, 6, 7, 4, 8, 2
+sliceTuple = numTuple[1:4]
+print('index1~3までのタプル:', sliceTuple)
