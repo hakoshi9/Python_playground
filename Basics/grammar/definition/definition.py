@@ -1,10 +1,7 @@
 """関数で遊ぶ"""
 
 
-"""通常の宣言"""
-def say_something():
-    print('say_something()の実行:', 'hi')
-say_something()
+
 
 
 
