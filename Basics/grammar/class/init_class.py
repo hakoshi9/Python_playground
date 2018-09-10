@@ -25,4 +25,5 @@ class AnotherPerson(object):
 
 if __name__ == '__main__':
     person = Person()
+    #初期化をするにはインスタンス生成時に値をクラスに渡す
     another_person = AnotherPerson('Joshua')

@@ -5,8 +5,11 @@ class Person(object): #(object)はなくても良いが、コードスタイル�
     def say_something(self):
         print('Hello')
 
-#インスタンスの生成
-person = Person()
 
-#インスタンスのなかのメソッドを実行
-person.say_something()
+
+
+if __name__ == '__main__':
+    #インスタンスの生成
+    person = Person()
+    #インスタンスのなかのメソッドを実行
+    person.say_something()
