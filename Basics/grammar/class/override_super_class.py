@@ -14,11 +14,13 @@ class Car(object):
     def run(self):
         print('Run')
 
+ 
 #基底クラスを継承したクラス
 class TeslaCar(Car):
     #オーバーライド
     def run(self):
         print('Runs Super Fast')
+
 
 class JoshuaCar(Car):
     pass
