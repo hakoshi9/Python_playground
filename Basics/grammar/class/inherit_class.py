@@ -39,5 +39,3 @@ if __name__ == '__main__':
     #両方使える！
     tesla_car.run()
     tesla_car.auto_run()
-
-
