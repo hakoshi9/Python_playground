@@ -10,3 +10,16 @@ say_something()
 var = say_something
 # その場合は変数名()と実行する
 var()
+
+
+# def print_result_defName(func):
+#     def wrapper(*args, **kwargs):
+#         result = func(*args, **kwargs)
+#         return print('{0}の実行: {1}'.format(func.__name__, result))
+#     return wrapper
+
+# @print_result_defName
+# def hi(word):
+#     return word
+
+# hi('Joshua Hashimoto')

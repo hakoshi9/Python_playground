@@ -37,7 +37,8 @@ class JoshuaCar(Car):
 
 if __name__ == '__main__':
     car = Car('Regular Car')
-    tesla_car = TeslaCar()
+    tesla_car = TeslaCar("Electric Car")
+    joshua_car = JoshuaCar()
 
     #[オーバーライドの実演]
     #carのrun()を実行
@@ -52,3 +53,4 @@ if __name__ == '__main__':
     #[super()の実演]
     print(car.model)
     print(tesla_car.model)
+    print(joshua_car.model)
