@@ -39,7 +39,7 @@ print('num9:', num9)
 
 
 
-"""上記がクラスの__init__でもできるのか試す"""
+"""変数の複数宣言がクラスの__init__でもできるのか試す"""
 class VarTest(object):
     def __init__(self):
         self.num10, self.num11 = 10, 20
