@@ -129,10 +129,10 @@ print('それを逆にソート:', numList)
 
 """リストのアンパック"""
 listVar1, listVar2, listVar3, listVar4 = tupleList
-print('listVar1', listVar1)
-print('listVar2', listVar2)
-print('listVar3', listVar3)
-print('listVar4', listVar4)
+print('listVar1:', listVar1)
+print('listVar2:', listVar2)
+print('listVar3:', listVar3)
+print('listVar4:', listVar4)
 
 
 
