@@ -65,3 +65,7 @@ print(change_size_string.capitalize()) #最初は大文字になって残りは�
 print(change_size_string.title()) #全てのワードの最初の文字を大文字にする
 print(change_size_string.upper()) #全て大文字となる
 print(change_size_string.lower()) #全て小文字となる
+
+
+
+"""文字列の組み込み"""
