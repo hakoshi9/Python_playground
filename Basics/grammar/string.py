@@ -69,3 +69,9 @@ print(change_size_string.lower()) #全て小文字となる
 
 
 """文字列の組み込み"""
+first_name = 'Joshua'
+last_name = 'Hashimoto'
+age = 22
+#format()と文字列中の{}を使うことで文字列に値を組み込むことができる
+introduction_str = 'Hello, my name is {first_name} {last_name}. {age} years old.'.format(first_name=first_name, last_name=last_name, age=age)
+
