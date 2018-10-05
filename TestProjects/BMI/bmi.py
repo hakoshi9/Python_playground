@@ -28,6 +28,16 @@ class Body_Calculate(object):
         return (weight, height)
 
 
+    def bmi(self):
+        pass
+
+
+    def basal_metabolism(self):
+        pass
+
+
+    def suitable_weight(self):
+        pass
 
 
 
