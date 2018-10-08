@@ -23,7 +23,9 @@ class TeslaCar(Car):
 
 
 class JoshuaCar(Car):
-    pass
+    #オーバーライド
+    def run(self):
+        print('Joshua car runs slow, but longer then any other cars')
 
 
 
