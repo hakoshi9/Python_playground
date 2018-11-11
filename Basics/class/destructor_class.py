@@ -1,6 +1,9 @@
+"""デストラクタ"""
+# デストラクタは__init__とは逆
+# __init__ が初期化時に行う処理であるのに対し、
+# デストラクタの__del__はクラスが消されるときに実行される
+# あまり使われることはない
 
-
-# デストラクタ
 class Person(object):
     # これはコンストラクタと呼ばれる
     # 初めに作るもの
@@ -19,15 +22,13 @@ class Person(object):
 
 
 
+person = Person('Joshua')
+person.say_hello()
 
-if __name__ == '__main__':
-    person = Person('Joshua')
-    person.say_hello()
-
-    print('# # # # # # # # # # # # # # # # ')
-    # printのあとにpersonというオブジェクトがもうないことをPythonが感知しオブジェクトを消す
-    # そのためデストラクタが実行される
+print('# # # # # # # # # # # # # # # # ')
+# printのあとにpersonというオブジェクトがもうないことをPythonが感知しオブジェクトを消す
+# そのためデストラクタが実行される
 
 
-    # では意図的にデストラクタを実行させるには？
-    # del person
+# では意図的にデストラクタを実行させるには？
+# del person

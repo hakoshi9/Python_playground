@@ -1,5 +1,8 @@
+"""クラスの初期化"""
+# クラスは、そのインスタンスを生成するときに初期化を行うことができる
+# 初期化を行うことで、インスタンス生成時に引数を通して渡した値でクラスを生成することができる
+# つまり、より柔軟にクラスを生成することができるようになる
 
-# クラスの初期化
 class Person(object):
     # __init__で初期化
     # __init__で書いた処理が最初に処理される
@@ -23,9 +26,7 @@ class AnotherPerson(object):
 
 
 
-
-if __name__ == '__main__':
-    person = Person()
-    # 初期化をするにはインスタンス生成時に値をクラスに渡す
-    another_person = AnotherPerson('Joshua')
-    another_person.say_hello()
+person = Person()
+# 初期化をするにはインスタンス生成時に値をクラスに渡す
+another_person = AnotherPerson('Joshua')
+another_person.say_hello()
