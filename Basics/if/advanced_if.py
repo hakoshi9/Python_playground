@@ -35,8 +35,3 @@ elif 30 <= num <= 39:
     print("I'm in my 30's")
 else:
     print('too old for you')
-
-
-
-"""break演算子"""
-#break演算子は、
