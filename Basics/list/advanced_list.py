@@ -1,148 +1,135 @@
-"""通常の要素追加"""
-gameList = []
-gameList.append('Destiny2')
-gameList.append('Borderlands2')
-print(gameList)
-
-
-
 """+=で複数の値を一度に追加"""
-gameList += 'Fallout4', 'Biohazard7'
-print(gameList)
+# 要素を1つずつ追加するのではなく複数を一度に追加する
+multi_add_list = []
+multi_add_list += 'Fallout4', 'Biohazard7'
+print(multi_add_list)
 
 
 
-"""extend()で複数の値を一度に追加。これの場合は複数の値をリストにする必要がある"""
-#リストを別のリストと結合する時に使える
-gameList.extend(["Assassin's Creed4: Black flag", 'Titan Fall2'])
-print(gameList)
+"""extend()でリストを別のリストに追加"""
+# リストを別のリストと結合する時に使える
+multi_add_list.extend(["Assassin's Creed4: Black flag", 'Titan Fall2',])
+print(multi_add_list)
 
 
 
 """リストの要素数を調べる"""
-listCount = len(gameList)
-print(listCount)
+# リストの中にある要素の数を返す
+print('リストの要素数を出力', len(multi_add_list))
 
 
 
 """リストの中にある特定の要素が何個存在するかを数える"""
-fruitList = ['Apple', 'Banana', 'Mango', 'Bluebarry', 'Apple', 'Apple', 'Mango']
-appleCount = fruitList.count('Apple')
-bananaCount = fruitList.count('Banana')
-mangoCount = fruitList.count('Mango')
-orangeCount = fruitList.count('Orange')
-print('Apple:', appleCount)
-print('Banana:', bananaCount)
-print('Mango:', mangoCount)
-print('Orange:', orangeCount)
+# リスト内の重複している要素の個数を調べることができる
+multi_element_list = ['Apple', 'Banana', 'Mango', 'Bluebarry', 'Apple', 'Apple', 'Mango',]
+apple_count = multi_element_list.count('Apple')
+banana_count = multi_element_list.count('Banana')
+mango_count = multi_element_list.count('Mango')
+orange_count = multi_element_list.count('Orange')
+print('Apple count:', apple_count)
+print('Banana count:', banana_count)
+print('Mango count:', mango_count)
+print('Orange count:', orange_count)
 
 
 
-"""どこから要素を持ってくるかを選べる"""
-print('全て:', gameList[:])
-print('index1からindex3の手前まで:', gameList[1:3])
-print('最初からindex4手前まで:', gameList[:4])
-print('index2から最後まで:', gameList[2:])
+"""要素のスライス"""
+# リスト内の要素を、範囲を指定して取り出すことができる
+slice_list = [1 ,3 ,5 ,7, 9, 11,]
+print('スライス@全て:', slice_list[:])
+print('スライス@index1からindex3の手前まで:', slice_list[1:3])
+print('スライス@最初からindex4手前まで:', slice_list[:4])
+print('スライス@index2から最後まで:', slice_list[2:])
 
 
 
-"""飛ばしてリストを取ってくる"""
-jumpTwo = fruitList[::2]
-print('偶数を飛ばす:',jumpTwo)
-
-
-
-"""要素の書きかえ"""
-fruitList[4] = 'Melon'
-print('index4を書きかえ:', fruitList)
-fruitList[1:4] = [1, 2, 3]
-print('スライスによる書きかえ:', fruitList)
-
-
-
-"""要素の削除"""
-nameList = ['Joshua', 'Ted', 'Shino', 'Kubo', 'Suganen', 'Mattsun']
-print('nameList:', nameList)
-#[最後の要素を取り出して削除(取り出した値を受け取れる)]
-fruitList.pop()
-print('リストの最後の要素を取り出して削除:', fruitList)
-#[指定した箇所の要素を取り出して削除(取り出した値を受け取れる)]
-fruitList.pop(4)
-print('指定した箇所の要素を取り出して削除:', fruitList)
-#[通常の削除 del]
-del fruitList[-1]
-print('一番最後の要素をdelを使って削除(list[index]で要素を指定):', fruitList)
-#[通常の削除 remove(要素)]
-nameList.remove('Joshua')
-print('特定の要素を指定して削除:', nameList)
+"""スライスを飛ばす"""
+# 特定の条件でスライスを飛ばして取り出すことができる
+jump_list = [2, 4, 6, 8, 10, 12,]
+print('Show every other list:',jump_list[::2])
 
 
 
 """要素の挿入"""
-gameList.insert(0, 'Colony Servival')
-print('リストのindex0に要素を挿入:', gameList)
+# 要素を特定の位置に挿入することができる
+insert_list = ['Joshua', 'Ted', 'Shino', 'Kubo', 'Suganen', 'Mattsun',]
+insert_list.insert(0, 'Kensei')
+print('リストのindex0に要素を挿入:', insert_list)
 
 
 
-"""リストの中身の合計(全てが数値のとき)"""
-numList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-sumNumList = sum(numList)
-print('リストの合計値:', sumNumList)
+"""リストの中身の合計"""
+# リストの中の要素が全て数値の場合に限り、要素の合計値を求めることができる
+sum_list = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
+print('リストの合計値を出力:', sum(sum_list))
 
 
 
 """タプルからリストを作る"""
-myTuple = 10, 20, 30, 40
-tupleList = list(myTuple)
-print('タプルから作られたリスト:', tupleList)
+# タプルをリストに変換することができる
+to_list_tuple = 10, 20, 30, 40
+print('タプルから作られたリスト:', list(to_list_tuple))
 
 
 
 """setからリストを作る"""
-mySet = {1, 2, 3, 4}
-setList = list(mySet)
-print('setから作られたリスト:', setList)
+# setをリストに変換することができる
+to_list_set = {1, 2, 3, 4}
+print('setから作られたリスト:', list(to_list_set))
 
 
 
 """文字列からリストを作る"""
+# 文字列をリストに変換することができる
+# これには2つの方法が存在する
+# [list()メソッドを使う]
 str1 = "abcdefg"
+print('str1からリストを作成:', list(str1))
+# [split()メソッドを使う]
 str2 = 'これは、文字列、を、リスト、に、するため、の、文字列、です'
-strList1 = list(str1)
-strList2 = str2.split('、')
-print('str1からリストを作成:', strList1)
-print('str2からリストを作成:', strList2)
+print('str2からリストを作成:', str2.split('、'))
 
 
 
 """リストをソートする"""
-numList = [5, 3, 1, 9, 6, 7, 4, 8, 2]
-numList.sort()
-print('numListをソート', numList)
-numList.reverse()
-print('それを逆にソート:', numList)
+# リストの中身をある法則で並べ換える
+# リストの中身が同じ型でなくても、デフォルトの法則で並び替える
+sort_list = [5, 3, 1, 9, 6, 7, 4, 8, 2,]
+sort_list.sort() # sort()メソッドは戻り値が無いためそのまま出力することができない
+print('sort_listをソート', sort_list)
+sort_list.reverse() # reverse()メソッドは戻り値が無いためそのまま出力することができない
+print('それを逆にソート:', sort_list)
 
 
 
 """リストのアンパック"""
-listVar1, listVar2, listVar3, listVar4 = tupleList
-print('listVar1:', listVar1)
-print('listVar2:', listVar2)
-print('listVar3:', listVar3)
-print('listVar4:', listVar4)
+unpack_list = ['apple', 'grape', 'banana', 'strawbarry',]
+unpack_var1, unpack_var2, unpack_var3, unpack_var4 = unpack_list
+print('unpack_var1:', unpack_var1)
+print('unpack_var2:', unpack_var2)
+print('unpack_var3:', unpack_var3)
+print('unpack_var4:', unpack_var4)
 
 
 
-"""インデックスの検索"""
-index_search = [1, 2, 3, 4, 5, 6, 5, 4, 3 ,2 ,1]
-print('指定した要素がリストのどのインデックスかを返す:', index_search.index(3)) #ただし、最初に引っかかるものを返す
-print('指定した値から先の指定した要素のインデックスを返す:', index_search.index(3, 4)) #第一引数->開始, 第二引数->検索要素
+"""特定要素のインデックスの検索"""
+index_search1 = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1,]
+index_search2 = ['apple', 'grape', 'banana', 'strawbarry', 'water melon', 'mango']
+print('指定した要素がリストのどのインデックスかを返す1:', index_search1.index(3)) # ただし、最初に引っかかるものを返す
+print('指定した要素がリストのどのインデックスかを返す2:', index_search2.index('strawbarry'))
+print('指定した値から先の指定した要素のインデックスを返す:', index_search1.index(3, 4)) # 第一引数->開始, 第二引数->検索要素
 
 
 
 """要素の検索"""
-#[if構文を使う]
-if 8 in index_search:
+search_list = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1,]
+# [in演算子を使う]
+# True, Falseが返される
+print('apple' in search_list)
+print(5 in search_list)
+# [if構文を使う]
+# 上記をifにしただけ。やってることは同じ
+if 8 in search_list:
     print('exist')
 else:
     print('does not exist')
@@ -150,16 +137,28 @@ else:
 
 
 """リストのコピー"""
-#[リストは参照型のためコピーをしないといけない]
-firstList = [1, 2, 3, 4, 5]
-secondList = firstList
-secondList[1] = 100
-print('secondList[1]に100を代入すると参照しているfirstListの[1]も変わってしまう')
-print('firstList:', firstList)
-print('secondList:', secondList)
-thirdList = firstList.copy()
-thirdList[3] = 200
-print('firstListをthirdListにコピーしたのちthirdList[3]を200に変更')
-print('firstList:', firstList)
-print('secondList:', secondList)
-print('thirdList:', thirdList)
+# [リストは参照型のためコピーをしないといけない,]
+copy_list1 = [1, 2, 3, 4, 5,]
+copy_list2 = copy_list1
+copy_list2[1] = 100
+print('copy_list2[1]に100を代入すると参照しているcopy_list1の[1]も変わってしまう')
+print('copy_list1:', copy_list1)
+print('copy_list2:', copy_list2)
+copy_list3 = copy_list1.copy()
+copy_list3[3] = 200
+print('copy_list1をcopy_list3にコピーしたのちcopy_list3[3]を200に変更')
+print('copy_list1:', copy_list1)
+print('copy_list2:', copy_list2)
+print('copy_list3:', copy_list3)
+
+
+
+"""要素内の最大値を求める"""
+max_list = [10, 4, 5, 8, 11, 45, 21,]
+print('リストの最大値を出力:', max(max_list))
+
+
+
+"""要素内の最小値を求める"""
+min_list = [10, 4, 5, 8, 11, 45, 21,]
+print('リストの最小値を出力:', min(min_list))

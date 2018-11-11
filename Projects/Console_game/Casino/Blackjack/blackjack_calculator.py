@@ -8,21 +8,21 @@ class Blackjack_calculator():
         self.__pointList_with_one = []
         self.__pointList_with_eleven = []
         self.__hand = []
-        #self.__cards = [ "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        # self.__cards = [ "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 
     def rand_card(self):
         rand = random.randint(0, 12)
-        #二つの値を戻す
+        # 二つの値を戻す
         return [ "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"][rand], rand
 
 
     '''カードをhitする関数'''
     def hit_card(self):
-        #luck = random.randint(0, 12)
+        # luck = random.randint(0, 12)
 
         try:
-            #what_card = self.__cards[luck]
-            #二つの変数に戻ってきた値をそれぞれ入れる
+            # what_card = self.__cards[luck]
+            # 二つの変数に戻ってきた値をそれぞれ入れる
             what_card, luck = self.rand_card()
             self.__hand.append(what_card)
             if luck == 0:

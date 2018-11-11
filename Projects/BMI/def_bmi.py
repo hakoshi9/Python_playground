@@ -1,4 +1,4 @@
-#base_level_bmi.pyの記述を、defを使ってオブジェクト指向よりにしたもの
+# base_level_bmi.pyの記述を、defを使ってオブジェクト指向よりにしたもの
 
 from decimal import Decimal as decimal
 
@@ -22,9 +22,9 @@ def show_wgt_hgt(wgt_hgt):
 
 def show_BMI(wgt_hgt):
     weight, height = wgt_hgt
-    #BMI計算式: 体重kg÷(身長m)^2
-    bmi = weight / (height ** 2) #Pythonにおけるべき乗の計算は m ** n
-    #同じ変数に小数第二位までのbmiを代入
+    # BMI計算式: 体重kg÷(身長m)^2
+    bmi = weight / (height ** 2) # Pythonにおけるべき乗の計算は m ** n
+    # 同じ変数に小数第二位までのbmiを代入
     bmi = decimal(bmi).quantize(decimal('0.01'))
     print('BMI: {bmi}'.format(bmi=bmi))
 

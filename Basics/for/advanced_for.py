@@ -15,14 +15,14 @@ fruits = ['Apple', 'Banana', 'Mango', 'Bluebarry', 'Apple', 'Apple', 'Mango']
 for fruit in fruits:
     print('I ate ->', fruit)
 else:
-    #elseをつけると、ループを抜けた時の処理をかける
-    #ただし、breakで抜けた場合は実行されない
+    # elseをつけると、ループを抜けた時の処理をかける
+    # ただし、breakで抜けた場合は実行されない
     print('I ate all!')
 
 
 """enumerate関数"""
-#[ようはforループで回しているリストのindexも返す関数]
-#indexが先にくる
+# [ようはforループで回しているリストのindexも返す関数]
+# indexが先にくる
 for index, fruit in enumerate(fruits):
     print('index number {index}: {fruit}'.format(index=index, fruit=fruit))
 
@@ -37,10 +37,10 @@ for day, fruit, drink in zip(days, fruits, drinks):
 
 """辞書のforループ"""
 my_dict = {'name': 'Joshua Hashimoto', 'age': 23, 'job': 'programmer', 'sex': 'Male'}
-#[通常はkeyのみが出力される]
+# [通常はkeyのみが出力される]
 for i in my_dict:
     print(i)
-#[keyもvalueも取り出す場合]
+# [keyもvalueも取り出す場合]
 for key, value in my_dict.items():
     print('{key}: {value}'.format(key=key, value=value))
 

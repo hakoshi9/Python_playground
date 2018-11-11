@@ -1,4 +1,4 @@
-#def_bmi.pyにclass, while, try-exceptを使用してよりちゃんとしたプログラムにブラシアップ
+# def_bmi.pyにclass, while, try-exceptを使用してよりちゃんとしたプログラムにブラシアップ
 
 class Body_Calculate(object):
     def __init__(self, *args, **kwargs):
