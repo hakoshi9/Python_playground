@@ -19,5 +19,6 @@ for i in range(51): #range(51)とすることで1~50までの範囲を取得で�
     print(range_num)
 
 # 純粋に回数を利用した処理
+# 値を入れている変数iは使う必要は実はない
 for i in range(10):
     print('Hello')

@@ -50,5 +50,6 @@ my_dict = {'name': 'Joshua Hashimoto', 'age': 23, 'job': 'programmer', 'sex': 'M
 for i in my_dict:
     print(i)
 # [keyもvalueも取り出す場合]
+# このとき、keyが必ず先に取り出される
 for key, value in my_dict.items():
     print('{key}: {value}'.format(key=key, value=value))
