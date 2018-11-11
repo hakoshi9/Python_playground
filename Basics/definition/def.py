@@ -1,25 +1,19 @@
+"""関数の基礎"""
+# 関数は、一定の処理をまとめておく機能のこと
+# 例えば、一つのファイルにifやforを多数書いて欲しい処理を実行することはできる
+# しかし、それでは例えば、同じ処理を繰り返し書かなくてはいけない
+# その処理を関数にまとめておくと、他の場所(他のファイル/他のフォルダ)でも繰り返しその処理を実行することができる
 
 # 通常の宣言
+# def 関数名():
+#     処理
 def say_something():
     print('say_something()の実行:', 'hi')
 
-# 宣言は関数名()で行うことができる
+# 実行は関数名()で行うことができる
 say_something()
 
 # 変数に代入することもできる
 var = say_something
-# その場合は変数名()と実行する
+# この場合は変数名()で実行できる
 var()
-
-
-# def print_result_defName(func):
-#     def wrapper(*args, **kwargs):
-#         result = func(*args, **kwargs)
-#         return print('{0}の実行: {1}'.format(func.__name__, result))
-#     return wrapper
-
-# @print_result_defName
-# def hi(word):
-#     return word
-
-# hi('Joshua Hashimoto')
