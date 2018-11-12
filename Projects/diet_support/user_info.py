@@ -1,5 +1,12 @@
 """アプリユーザーの基礎情報を保持しておくクラス"""
 class UserInfo():
+    """
+    Attributes:
+        gender (int):
+        age (int):
+        weight (float):
+        height (height):
+    """
     def __init__(self):
         self.gender = self.ask_gender()
         self.age = self.ask_age()
