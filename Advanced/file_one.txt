@@ -1,4 +1,0 @@
-This is my first file I have created from Python
-My name is Foo Bar
-
-Added

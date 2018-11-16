@@ -1,5 +1,5 @@
 """seak"""
-# seekでファイル内での(カーソルの)場所を変更することができる
+# seekでファイル内での(インデックスの)場所を変更することができる
 
 string = """\
 AAA
@@ -20,7 +20,7 @@ with open('file_two.txt', 'w') as f:
 
 # 読み込み
 with open('file_two.txt', 'r') as read:
-    # tell()で現在のカーソルの位置を返してくる
+    # tell()で現在のインデックスの位置を返してくる
     print(read.tell())
     # read()に数字を引数として渡すと、その位置から引数に渡した数分の文字を返してくる
     print(read.read(1))
