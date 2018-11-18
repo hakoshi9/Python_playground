@@ -13,5 +13,5 @@ class BodyCalculator():
         pass
 
 
-    def ideal_adsorb_calories(self):
+    def ideal_absorb_calories(self):
         pass
