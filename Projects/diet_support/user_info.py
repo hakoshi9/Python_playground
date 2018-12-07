@@ -1,6 +1,8 @@
 """アプリユーザーの基礎情報を保持しておくクラス"""
 class UserInfo():
     """
+    Holes users information what the users inputed
+
     Attributes:
         gender (int):
         age (int):
@@ -12,6 +14,10 @@ class UserInfo():
         self.age = self.ask_age()
         self.weight = self.ask_weight()
         self.height = self.ask_height()
+        print(self.gender)
+        print(self.age)
+        print(self.weight)
+        print(self.height)
 
 
     def ask_gender(self):
