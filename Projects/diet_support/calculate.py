@@ -41,7 +41,19 @@ class BodyCalculator():
         pass
 
 
-    def suitable_weight(self):
+    def suitable_weight(self, height=None):
+        """
+        Calculates users suitable weight using the users height
+
+        Logic:
+            Suitable Weight: height(m)^2 * 22
+            
+        Args:
+            height(float/int): Users height. Default is set as None.
+
+        Returns:
+            suitable_metabolism(float): Returns users
+        """
         pass
 
 
