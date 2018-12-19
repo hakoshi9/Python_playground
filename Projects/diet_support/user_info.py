@@ -14,10 +14,6 @@ class UserInfo():
         self.age = self.ask_age()
         self.weight = self.ask_weight()
         self.height = self.ask_height()
-        print(self.gender)
-        print(self.age)
-        print(self.weight)
-        print(self.height)
 
 
     def ask_gender(self):
@@ -25,6 +21,7 @@ class UserInfo():
         while True:
             try:
                 gender = int(input('[0. 男性    1. 女性]\n'))
+                # TODO: 入力値が0,1以外の時の対処
                 break
             except:
                 print('数字で入力してください')

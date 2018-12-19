@@ -38,15 +38,20 @@ class BodyCalculator():
         Returns:
             basal_metabolism(float): Returns users 
         """
-        pass
+        if gender == 0:
+            return 66.47 + (13.75*weight) + (5.00*height) - (6.78*age)
+        elif gender == 1:
+            return 655.1 + (9.56*weight) + (1.85*height) - (4.68*age)
+        
 
 
-    def suitable_weight(self, height=None):
+    def suitable_weight(self, gender=None, height=None):
         """
         Calculates users suitable weight using the users height
 
         Logic:
-            Suitable Weight: height(m)^2 * 22
+            Suitable Weight for male: height(m)^2 * 22
+            Suitable Weight for female: height(m)^2 * 21
             
         Args:
             height(float/int): Users height. Default is set as None.
@@ -54,8 +59,7 @@ class BodyCalculator():
         Returns:
             suitable_metabolism(float): Returns users
         """
-        pass
-
-
-    def ideal_absorb_calories(self):
-        pass
+        if gender == 0:
+            return (height ** 2) * 22
+        elif gender == 1:
+            return (height ** 2) * 21
