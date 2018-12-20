@@ -16,3 +16,6 @@ class Controller(object):
 
     def call_ending(self):
         pass
+
+    def call_user_info(self):
+        pass
