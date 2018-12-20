@@ -34,7 +34,7 @@ with open('file_two.txt', 'r') as read:
     #     if not line:
     #         break
 
-    #チャンクで詠みこむこともできる
+    #チャンクで読み込むこともできる
     while True:
         chunk = 2
         # 1行をchunkに入っている数で区切って改行する
